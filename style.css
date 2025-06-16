@@ -1,0 +1,200 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color:White;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav{
+    position: fixed;
+    top: 0;
+    width:100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 20px 60px;
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.7) 0%,/*a 70% opaque black at the top*/
+        rgba(0,0,0,0) 100% /* fully transparent at the bottom */
+    );
+    z-index: 100;/*always nav on top*/
+    transition: background-color 0.3s;/*This sets a smooth transition effect when the background-color changes */
+
+}
+.prime1,
+.home {
+  width: 40px;
+  height: 40px;
+  object-fit: contain; /* Ensures image fits well */
+}
+.nav-nav{
+    display:flex;
+    align-items: stretch;
+    gap:40px;
+}
+.fa-search {
+  font-size: 30px; /* or 24px or larger as needed */
+}
+.nav-link{
+    display:flex;
+    align-self: center;
+    text-decoration: none;
+    font-size: 25px;
+    color:white;
+    display:flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+.nav-link:hover{
+    display:flex;
+    align-items: center;
+    max-width: max-content;
+    background-color: white;
+    color: black;
+    height:100%;
+    width:100%;
+    border-radius: 5px;
+}
+.nav-right{
+    display:flex;
+    gap:20px;
+    align-items: center;
+}
+.highlight{
+    padding-top: 100px;
+}
+.poster{
+    position: relative;
+    width:100%;
+    height:30%;
+}
+.text{
+    position: absolute;
+    top:30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.main-movie{
+    margin-bottom: 30px;
+}
+.text{
+    padding:40px;
+}
+.text p{
+    padding:20px;
+}
+.btn1{
+    margin-top: 20px;
+    display: flex;
+    gap:20px;
+    font-size: 20px;
+}
+.btn-play,.btn-more-info{
+    padding:10px;
+    border-radius:10px;
+    gap:10px;
+}
+.btn-play:hover,.btn-more-info:hover{
+    color:white;
+    background-color: transparent;
+}
+.list-movie{
+    margin-top: 20px;
+    padding-left:20px;
+    display:flex;
+    gap:30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.list-movie::-webkit-scrollbar{/*adjust scrolllbar*/
+    height:8px;
+}
+.list-movie::-webkit-scrollbar-thumb{/*controls the dragaable part of scrollbar*/
+    background-color:rgba(222, 206, 206, 0.3);
+}
+.list-movie::-webkit-scrollbar-thumb:hover{/*controls the dragaable part of scrollbar*/
+    background-color:rgba(128, 120, 120, 0.253);
+}
+.movies{
+    gap:20px;
+    max-width: 100%;
+    padding-left: 20px;
+}
+.content-card{
+    position:relative;
+    width:300px;
+    overflow: hidden;
+}
+.content-card h1{
+    font-size: 20px;
+}
+.content-card img{
+    width:300px;
+    height:200px;
+}
+.hover-card{
+    position: absolute;
+    top:0;
+    right:0;
+    left: 0;
+    bottom: 0;
+    background-color: transparent;
+    opacity:0;
+    transition:opacity 0.3 ease-in;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.overlay-top{
+    position:absolute;
+    top:10%;
+    left:10%;
+    background-color: brown;
+    color:black;
+    padding:8px;
+    border-radius: 100px;
+}
+.content-card:hover .hover-card{
+    opacity:1;
+    background-color: rgba(0, 0, 0, 0.151);
+}
+
+.fas1{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+}
+.play1 i{
+    color:white;
+    background-color: rgba(0, 0, 0, 0.674);
+    padding: 10px;
+    font-size: 20px;
+    cursor:pointer;
+}
+.genre{
+    margin-top:15px;
+    display: flex;
+    gap:10px;
+    background-color: rgba(0, 0, 0, 0.477);
+}
+.footer1{
+    font-size: 8px;
+}
+.primee{
+    height: 50px;
+    margin-left:45%;
+}
+.foot{
+    display: flex;
+    gap:15px;
+    margin-left:20%;
+}
