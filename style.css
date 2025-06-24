@@ -46,7 +46,6 @@ body{
     text-decoration: none;
     font-size: 25px;
     color:white;
-    display:flex;
     justify-content: space-between;
     text-decoration: none;
 }
@@ -56,8 +55,7 @@ body{
     max-width: max-content;
     background-color: white;
     color: black;
-    height:100%;
-    width:100%;
+    padding:5px;
     border-radius: 5px;
 }
 .nav-right{
@@ -149,7 +147,7 @@ body{
     bottom: 0;
     background-color: transparent;
     opacity:0;
-    transition:opacity 0.3 ease-in;
+    transition:opacity 0.3s ease-in;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -162,6 +160,13 @@ body{
     color:black;
     padding:8px;
     border-radius: 100px;
+}
+.content-card, .btn, .nav-link, .play1 i {
+    cursor: pointer;
+}
+.content-card:hover{
+    transform:scale(1.2);
+    transition: transform 0.3s ease-in;
 }
 .content-card:hover .hover-card{
     opacity:1;
@@ -197,4 +202,19 @@ body{
     display: flex;
     gap:15px;
     margin-left:20%;
+}
+
+@media (max-width: 768px) {
+    .list-movie {
+        gap: 10px;
+        padding-left: 10px;
+    }
+
+    .content-card {
+        width: 200px;
+    }
+
+    .content-card img {
+        height: 150px;
+    }
 }
