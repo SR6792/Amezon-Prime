@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet href="style1.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <img src="primee.png">
+    <div class="login">
+        <h1>
+            Login
+        </h1>
+        <div class="details">
+            <input placeholder="Enter Username" type="text" class="inp">  
+            <input placeholder="Enter Password" type="password" class="pass">
+        </div>
+        <button>Log-in</button>
+        <div class="out"></div>
+    </div>
+    <script>
+        const button=document.querySelector("button");
+        function login()
+        {
+            const name=document.querySelector(".inp").value;
+            const password=document.querySelector(".pass").value;
+            const output=document.querySelector(".out");
+            output.innerHTML="";
+            if(name && password){
+                const msg = `Welcome Back ${name}!`;
+                output.innerHTML = msg;
+            }
+        }
+        button.addEventListener("click",login);
+    </script>
+</body>
+</html>
